@@ -127,3 +127,7 @@ return dp[n][W];
 return dp[n][W];
 
   }
+
+  //time complexity and space complexity 
+  S = O(W) 
+  T = O(n x W) 
