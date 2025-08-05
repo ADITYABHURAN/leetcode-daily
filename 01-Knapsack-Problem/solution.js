@@ -97,3 +97,4 @@ class Solution {
 return dp[n][W];
 
   }
+//space complexity 
