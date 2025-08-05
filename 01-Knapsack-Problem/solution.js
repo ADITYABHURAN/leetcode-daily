@@ -97,4 +97,33 @@ class Solution {
 return dp[n][W];
 
   }
-//space complexity 
+//space complexity = O(n x W) 
+
+
+//space optimized tabulation approach  
+ knapsack(W, val, wt, n) {
+   //n + 1 rows and W+1 columns 
+   //We donot need 2D array for space optimized tabulation approach so we cut this below line and make a prev and curr for this method and change the values accordingly .
+   //const dp = Array.from({length:n+1}, ()=>Array(W+1).fill(0));
+   let prev = Array(W+1).fill(0);
+   let curr = Array(W+1).fill(0);
+ //nested for loop to state condition 
+   for(let i =1;i<=n;i++) {
+    for(let j=1;j<=n;j++) {
+        //make eclude and include 
+        const exclude = prev[j]         //changed dp[i-1] with prev
+        let iclude = 0;
+
+        //what if 
+        if(wt[i-1]<=j) {
+          include = val[i-1]+prev[j-wt[i-1]];
+        }
+         curr[j] = Math.max(exclude,include);
+
+    }
+    prev = curr.slice();
+
+   }
+return dp[n][W];
+
+  }
