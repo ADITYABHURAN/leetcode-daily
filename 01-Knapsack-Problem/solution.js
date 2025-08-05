@@ -10,9 +10,7 @@ Output: 12
 Explanation: Choose the last 2 items that weighs 2 and 5 units respectively and hold values 3 and 9 that add up to 12. */
 
 
-
-
-
+//recurssive approach 
 /**
  * @param {number} W
  * @param {number[]} val
@@ -44,3 +42,58 @@ class Solution {
     }
 }
 
+//memoization approach 
+
+class Solution {
+    knapsack(W, val, wt, n) {
+   // make a new array first 
+    const dp = Array.from({length:n}, ()=>Array(W+1).fill(-1));
+
+        function helper(index, remWeight) {
+            // Base case
+            if (index >= n || remWeight === 0) {
+                return 0;
+            }
+           //As we have filled all the array with -1 so if theres no -1 return the dp[index][remWeight]
+            if(dp[index] [remWeight] !==-1) {
+            return dp [index] [remWeight]
+            }
+
+            // Recursive cases
+            let exclude = helper(index + 1, remWeight);
+            let include = 0;
+            
+            if (wt[index] <= remWeight) {
+                include = val[index] + helper(index + 1, remWeight - wt[index]);
+            }
+
+            // Return the best of including or excluding
+           dp[index][remWeight] = Math.max(exclude, include);
+           return dp[index][remWeight];
+        }
+        return helper(0, W);
+    }
+}
+
+//tabulation approach 
+ knapsack(W, val, wt, n) {
+   //n + 1 rows and W+1 columns 
+   //make a 2d array 
+   const dp = Array.from({length:n+1}, ()=>Array(W+1).fill(0));
+ //nested for loop to state condition 
+   for(let i =1;i<=n;i++) {
+    for(let j=1;j<=n;j++) {
+        //make eclude and include 
+        const exclude = dp[i-1][j];
+        let iclude = 0;
+        //what if 
+        if(wt[i-1]<=j) {
+          include = val[i-1]+dp[i-1][j-wt[i-1]];
+        }
+        dp[i][j]=Math.max(exclude,include)
+
+    }
+   }
+return dp[n][W];
+
+  }
