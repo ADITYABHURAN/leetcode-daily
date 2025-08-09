@@ -24,3 +24,7 @@ function knapSack(N, W, val, wt) {
    }
    return dp[N][W];
 }
+//complexity analysis 
+//time complexity is O(n*W) as we are using two nested loops and it take n*w cells to fill the dp array 
+//space complexity is O(n*W) as we are using a 2D array of size n*w
+//space can be optimized to O(W) by using a single array and iterating from right to left in the inner loop
