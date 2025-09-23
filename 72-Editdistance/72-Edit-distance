@@ -79,3 +79,4 @@ var minDistance = function(word1, word2) {
 
 //approach 3 : tabulation
 
+// we always have an extra column while doing tabulation 
