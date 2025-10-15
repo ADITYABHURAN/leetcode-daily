@@ -1,3 +1,5 @@
+
+//sum 1 
 /**
  * Function to find two numbers in the array that add up to the target.
  * @param {number[]} nums - Array of integers
