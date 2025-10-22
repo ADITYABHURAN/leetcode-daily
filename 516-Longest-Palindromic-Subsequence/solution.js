@@ -17,6 +17,7 @@ var longestPalindromeSubseq = function(s) {
             }else{
                 // If the characters at the current indices are not the same,
                 // take the maximum value by either excluding the current character from the start or the end
+                // of the current substring
                 dp[i][j]= Math.max(dp[i+1][j],dp[i][j-1]);
             }
         }
