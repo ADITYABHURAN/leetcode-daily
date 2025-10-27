@@ -9,7 +9,7 @@ weight[] = [8,2,5]
 Output: 12
 Explanation: Choose the last 2 items that weighs 2 and 5 units respectively and hold values 3 and 9 that add up to 12. */
 
-
+//a
 //recurssive approach 
 /**
  * @param {number} W
