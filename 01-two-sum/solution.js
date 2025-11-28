@@ -30,3 +30,17 @@ var twoSum = function(nums, target) {
     // If no solution is found (though problem says there’s always one)
     return [];
 };
+
+
+
+const map = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+        const lookingFor = target - nums[i];
+
+        if (map.has(lookingFor)) {
+            return [i, map.get(lookingFor)];
+        }
+
+        map.set(nums[i], i);
+    }
