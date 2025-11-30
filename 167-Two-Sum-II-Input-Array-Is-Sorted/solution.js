@@ -21,3 +21,5 @@ var twoSum = function(numbers, target) {
 
     }
 };
+
+//two pointer approach
