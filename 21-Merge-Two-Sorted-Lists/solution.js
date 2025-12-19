@@ -39,3 +39,6 @@ var mergeTwoLists = function(list1, list2) {
     // The head of merged list is dummy.next
     return dummy.next;
 };
+
+
+//above is iterative approach
