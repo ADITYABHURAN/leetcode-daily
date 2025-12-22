@@ -2,6 +2,8 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+
+
 function sortedSquares(nums) {
     let result = new Array(nums.length);
     let left = 0, right = nums.length - 1, pos = nums.length - 1;
