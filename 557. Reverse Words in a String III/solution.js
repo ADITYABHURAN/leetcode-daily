@@ -9,5 +9,6 @@ var reverseWords = function(s) {
         arr[i] = arr[i].split("").reverse().join("");
     }
 
+    
     return arr.join(" ");
 };
