@@ -4,6 +4,7 @@
 //if the current node is already in the set, return true (cycle detected)
 //if not, add the current node to the set and move to the next node
 //if we reach the end of the list (null), return false (no cycle)
+
 function hasCycle(head) {
   const visited = new Set();
 
