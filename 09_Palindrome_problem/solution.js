@@ -9,6 +9,9 @@ var isPalindrome = function(x) {
 };
 
 
+
+
+
 //slightly optimized version
 var isPalindrome = function(x) {
     if (x < 0 || (x % 10 === 0 && x !== 0)) return false;
