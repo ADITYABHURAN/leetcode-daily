@@ -15,5 +15,10 @@ var isAnagram = function(s, t) {
         if (map.get(char) < 0) return false;
     }
 
+
+
+
+
+    
     return true;
 };
