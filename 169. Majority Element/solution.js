@@ -21,3 +21,21 @@ var majorityElement = function(nums) {
     }
     return majority;
 };
+
+
+//hash table 
+var majorityElement = function(nums) {
+    const map = new Map();
+    const threshold = Math.floor(nums.length / 2);
+
+    for (let num of nums) {
+        map.set(num, (map.get(num) || 0) + 1);
+
+        if (map.get(num) > threshold) {
+            return num;
+        }
+    }
+};
+
+// Time complexity: O(n)
+// Space complexity: O(n)
