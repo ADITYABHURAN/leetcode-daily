@@ -23,6 +23,9 @@ var majorityElement = function(nums) {
 };
 
 
+
+
+
 //hash table 
 var majorityElement = function(nums) {
     const map = new Map();
