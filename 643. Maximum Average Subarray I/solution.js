@@ -8,6 +8,9 @@ var findMaxAverage = function(nums, k) {
         sum += nums[j];
     }
 
+
+
+    
     maxSum = sum;
 
     // 2. Slide the window
