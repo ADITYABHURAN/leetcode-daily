@@ -4,7 +4,7 @@
  * @return {number}
  */
 var minSubArrayLen = function(target, nums) {
-    let size = Number.MAX_VALUE;
+    let size = Infinity;
     let sum = 0;
 
     for (let i = 0; i < nums.length; i++) {
@@ -17,6 +17,7 @@ var minSubArrayLen = function(target, nums) {
                 break;
             }
          }
+
     }
-    return size === Number.MAX_VALUE ? 0 : size;
+    return size === Infinity ? 0 : size;
 };
