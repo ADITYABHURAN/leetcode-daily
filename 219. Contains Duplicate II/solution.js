@@ -1,6 +1,10 @@
 var containsNearbyDuplicate = function(nums, k) {
     const set = new Set();
 
+
+
+
+    
     //first window 
     // i < Math.min(k, nums.length) because if 
     // nums = [1,2,3,4,2] and if k  = 100
