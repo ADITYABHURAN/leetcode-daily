@@ -56,3 +56,34 @@ return max;
     };
 
     
+
+
+//solution where you dont need to remove character from set
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+    let max = 0;
+    let i = 0;
+    let j = 0;
+
+    const map = new Map;
+
+    while (j < s.length) {
+    const c = s.charAt(j);
+
+    if (map.has(c)) { //no map.haskey in js 
+
+      if (map.get(c) >= i) {
+      i = map.get(c);
+      i++;
+      }
+    }
+        map.set(c, j);
+        max = Math.max(max, j - i + 1);
+        j++
+    }
+return max;
+    };
+        
